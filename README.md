@@ -51,3 +51,17 @@ source venv/bin/activate   # For Windows, use: venv\Scripts\activate
 
 # Install the required dependencies
 pip install -r requirements.txt
+```
+### Project Structure
+```bash
+|-- mlops_project/
+    |-- data/
+    |-- models/
+    |-- notebooks/
+    |-- scripts/
+    |-- tests/
+    |-- config/
+    |-- README.md
+    |-- requirements.txt
+    |-- .gitignore
+
