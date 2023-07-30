@@ -8,14 +8,15 @@ Welcome to the MLOps project! This repository aims to showcase a comprehensive M
 ## Project Overview
 The MLOps project provides a structured and organized pipeline for machine learning projects, covering the entire workflow from data preprocessing to model deployment. The primary goal is to streamline collaboration among data scientists, machine learning engineers, and operations teams, leading to a more efficient and reliable model deployment process.
 
-## Features
-- Data preprocessing and feature engineering
-- Model training and evaluation
-- Model versioning and artifact management
-- Continuous integration and continuous deployment (CI/CD) pipeline
-- Automated model deployment to production environments
-- Monitoring and logging capabilities for deployed models
-- Scalable and adaptable architecture for various ML use cases
+## 🚀 Features
+- Data versioning and management using DVC 📊
+- Unit testing and integration testing with pytest 🧪
+- Model serving and API creation with Flask 🤖
+- Containerization and deployment with Docker 🐳
+- Cloud infrastructure and deployment on Amazon EC2 ☁️
+- Monitoring and visualization with Grafana 📈
+- Version control and continuous integration with GitLab 🔧
+- Model training and deployment with Amazon SageMaker 🏭
 
 ## Tech Stack
 The MLOps project utilizes the following main tools and libraries:
@@ -23,9 +24,14 @@ The MLOps project utilizes the following main tools and libraries:
 - TensorFlow 🧠 - an open-source machine learning library.
 - Scikit-learn 📚 - a machine learning library for Python.
 - MLflow 📦 - an open-source platform for the complete machine learning lifecycle.
-- Docker 🐋 - containerization platform for packaging applications.
-- Kubernetes ☸️ - container orchestration platform for deployment and scaling.
-- Git 🛠️ - version control system for tracking changes in the codebase.
+- DVC 📈 - a version control system for data sets and machine learning models.
+- Pytest 🧪 - a testing framework for Python.
+- Flask 🤖 - a lightweight web framework for creating APIs.
+- Docker 🐳 - containerization platform for packaging applications.
+- Amazon EC2 ☁️ - cloud-based virtual machines for deployment.
+- Grafana 📈 - a monitoring and observability platform.
+- GitLab 🔧 - version control and continuous integration platform.
+- Amazon SageMaker 🏭 - a fully managed service for building, training, and deploying machine learning models.
 
 ## Architecture
 Describe your MLOps project's high-level architecture here. You can use diagrams or text to provide an overview of how different components interact and how data flows through the pipeline.
