@@ -1,8 +1,8 @@
 # MLOps Project
 
 <p align="center">
-  <img src="https://seeklogo.com/vector-logo/273037/docker.svg" alt="Docker" width="50" height="50" />
-  <!-- Add more SVG icons here if needed -->
+  <img src="https://seeklogo.com/images/D/docker-logo-6D6F987702-seeklogo.com.png" alt="Docker" width="50" height="50" />
+  <!-- Add more PNG icons here if needed -->
 </p>
 
 ## Introduction
