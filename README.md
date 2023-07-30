@@ -35,7 +35,10 @@ The MLOps project utilizes the following main tools and libraries:
 
 ## Architecture
 Describe your MLOps project's high-level architecture here. You can use diagrams or text to provide an overview of how different components interact and how data flows through the pipeline.
-<img src="./mlops.png" alt="Image Description">
+<p align="center">
+  <img src="./mlops.png" alt="Image Description" style="border-radius: 50%; width: 200px; height: 200px;" />
+</p>
+
 
 
 
