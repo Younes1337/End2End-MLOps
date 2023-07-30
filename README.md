@@ -35,6 +35,8 @@ The MLOps project utilizes the following main tools and libraries:
 
 ## Architecture
 Describe your MLOps project's high-level architecture here. You can use diagrams or text to provide an overview of how different components interact and how data flows through the pipeline.
+![MLOps Architecture](https://drive.google.com/uc?id=1VIyboYx_3ExgVe2b7d4fTuCGuLX4pUSO)
+
 
 ## Getting Started
 To get started with this project, follow these instructions to set up your environment and start working with the MLOps pipeline.
