@@ -4,8 +4,8 @@
   <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="Amazon S3" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="Flask" width="50" height="50" />
-  <img src="https://www.vectorlogo.zone/logos/mlflow/mlflow-icon.svg" alt="MLflow" width="50" height="50" />
-  <img src="https://www.vectorlogo.zone/logos/dataversioncontrol/dataversioncontrol-icon.svg" alt="DVC" width="50" height="50" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/MLflow_Logo.png" alt="MLflow" width="50" height="50" />
+  <img src="https://avatars.githubusercontent.com/u/25256547" alt="DVC" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" width="50" height="50" />
 </p>
