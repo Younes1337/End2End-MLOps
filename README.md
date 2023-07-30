@@ -4,7 +4,7 @@
   <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="Amazon S3" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="Flask" width="50" height="50" />
-  <img src="https://commons.wikimedia.org/wiki/File:Git-logo.svg" alt="Git" width="50" height="50" />
+  <img src="https://commons.wikimedia.org/wiki/File:Git-logo.svg" alt="Git" width="50" height="50" />](https://commons.wikimedia.org/wiki/File:Git-logo.svg)
   <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" width="50" height="50" />
 </p>
