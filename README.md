@@ -2,8 +2,10 @@
 
 <p align="center">
   <img src="https://seeklogo.com/images/D/docker-logo-6D6F987702-seeklogo.com.png" alt="Docker" width="50" height="50" />
+  <img src="https://www.tensorflow.org/images/tf_logo_social.png" alt="TensorFlow" width="50" height="50" />
   <!-- Add more PNG icons here if needed -->
 </p>
+
 
 ## Introduction
 Welcome to the MLOps project! This repository aims to showcase a comprehensive MLOps implementation, enabling smooth and efficient development, deployment, and maintenance of machine learning models. MLOps is the practice of integrating machine learning workflows with DevOps practices, ensuring reproducibility, scalability, and automation throughout the model's lifecycle.
