@@ -1,6 +1,9 @@
 # MLOps Project
 
-![Project Logo](https://your-logo-url-here)
+<p align="center">
+  <img src="https://seeklogo.com/vector-logo/273037/docker.svg" alt="Docker" width="50" height="50" />
+  <!-- Add more SVG icons here if needed -->
+</p>
 
 ## Introduction
 Welcome to the MLOps project! This repository aims to showcase a comprehensive MLOps implementation, enabling smooth and efficient development, deployment, and maintenance of machine learning models. MLOps is the practice of integrating machine learning workflows with DevOps practices, ensuring reproducibility, scalability, and automation throughout the model's lifecycle.
