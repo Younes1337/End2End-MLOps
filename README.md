@@ -59,7 +59,6 @@ The MLOps project provides a structured and organized pipeline for machine learn
 - Cloud infrastructure and deployment on Amazon EC2 ☁️
 - Monitoring and visualization with Grafana 📈
 - Version control and continuous integration with GitLab 🔧
-- Model training and deployment with Amazon SageMaker 🏭
 
 ## Tech Stack
 The MLOps project utilizes the following main tools and libraries:
@@ -74,7 +73,6 @@ The MLOps project utilizes the following main tools and libraries:
 - Amazon EC2 ☁️ - cloud-based virtual machines for deployment.
 - Grafana 📈 - a monitoring and observability platform.
 - GitLab 🔧 - version control and continuous integration platform.
-- Amazon SageMaker 🏭 - a fully managed service for building, training, and deploying machine learning models.
 
 ## Architecture
 
