@@ -77,7 +77,7 @@ The MLOps project utilizes the following main tools and libraries:
 - Amazon SageMaker 🏭 - a fully managed service for building, training, and deploying machine learning models.
 
 ## Architecture
-Describe your MLOps project's high-level architecture here. You can use diagrams or text to provide an overview of how different components interact and how data flows through the pipeline.
+
 <p align="center">
   <img src="./mlops.png" alt="Image Description" style="border-radius: 50%;" />
 </p>
