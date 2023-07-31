@@ -98,57 +98,58 @@ pip install -r requirements.txt
 ```
 ### Project Structure
 ```bash
-MLOps_project/
+📁 MLOps_project/
 │
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── Dockerfile
-├── docker-compose.yml
+├── Dockerfile 🐳
+├── docker-compose.yml 🐳
 │
-├── src/
+├── 📁 src/
 │   ├── __init__.py
 │   ├── app.py
-│   ├── data/
+│   ├── 📁 data/
 │   │   └── (data loading and preprocessing scripts)
-│   ├── models/
+│   ├── 📁 models/
 │   │   └── (machine learning models and related scripts)
-│   ├── utils/
+│   ├── 📁 utils/
 │   │   └── (utility functions and helper scripts)
 │   └── mlflow_server.py
 │
-├── tests/
+├── 📁 tests/ 🧪
 │   ├── __init__.py
 │   ├── test_app.py
 │   ├── test_data.py
 │   ├── test_models.py
 │   └── test_utils.py
 │
-├── experiments/
-│   ├── experiment_1/
-│   │   └── mlruns/
-│   └── experiment_2/
-│       └── mlruns/
+├── 📁 experiments/ 🧪
+│   ├── 📁 experiment_1/
+│   │   └── 📁 mlruns/
+│   └── 📁 experiment_2/
+│       └── 📁 mlruns/
 │
-├── config/
+├── 📁 config/ ⚙️
 │   ├── config.yaml
 │   └── logging.yaml
 │
-├── logs/
+├── 📁 logs/ 📜
 │   └── (log files)
 │
-├── dashboards/
+├── 📁 dashboards/ 📊
 │   └── (Grafana dashboard configurations)
 │
-├── deployment/
+├── 📁 deployment/ 🚀
 │   ├── nginx.conf
 │   ├── supervisor.conf
 │   └── app.service
 │
-└── scripts/
+└── 📁 scripts/ 🛠️
     ├── setup.sh
     ├── deploy.sh
     └── run_tests.sh
+
 
 
 ```
