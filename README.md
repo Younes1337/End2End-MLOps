@@ -1,9 +1,26 @@
 <p align="center">
   <a href="https://cdnlogo.com/logo/phoenix_36514.html">
-    <img src="https://www.cdnlogo.com/logos/p/36/phoenix.svg" alt="Logo" width="200" height="200">
+    <img src="https://www.cdnlogo.com/logos/p/36/phoenix.svg" alt="Logo" width="150" height="150">
   </a>
 </p>
 
+<p align="center">
+  <a href="https://www.python.org/">
+    <img alt="Python Version" src="https://img.shields.io/badge/Python-3.7%2B-informational">
+  </a>
+  <a href="https://github.com/your-username/your-repo">
+    <img alt="GitHub Repo" src="https://img.shields.io/badge/GitHub-Repo-blue">
+  </a>
+  <a href="https://www.docker.com/">
+    <img alt="Docker" src="https://img.shields.io/badge/Docker-Latest-blue">
+  </a>
+  <a href="https://www.tensorflow.org/">
+    <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-2.x-orange">
+  </a>
+  <a href="https://jupyter.org/">
+    <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-Latest-orange">
+  </a>
+</p>
 <h1 align="center">End-to-End MLOps framework: From Data to Depolyment</h1>
 
  
