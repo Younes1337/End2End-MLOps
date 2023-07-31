@@ -1,4 +1,10 @@
-<h1 align="center">End-to-End MLOps : From Data to Deployment</h1>
+<p align="center">
+  <a href="https://cdnlogo.com/logo/phoenix_36514.html">
+    <img src="https://www.cdnlogo.com/logos/p/36/phoenix.svg" alt="Logo" width="80" height="80">
+  </a>
+</p>
+
+<h1 align="center">End-to-End MLOps framework: From Data to Depolyment</h1>
 
  
 <p align="center">
