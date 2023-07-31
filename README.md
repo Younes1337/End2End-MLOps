@@ -1,4 +1,5 @@
-# MLOps Project
+<h1 align="center">End-to-End MLOps : From Data to Deployment</h1>
+
  
 <p align="center">
   <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" width="50" height="50" />
