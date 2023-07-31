@@ -37,6 +37,7 @@
   </a>
   <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" width="50" height="50" />
+  <a href="https://logowik.com/nginx-vector-logo-9232.html"><img src="https://logowik.com/content/uploads/images/nginx9076.jpg"></a>
 </p>
 
 <!-- Divider -->
