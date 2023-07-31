@@ -4,7 +4,10 @@
   </a>
 </p>
 
-<p align="center">
+
+<h1 align="center">End-to-End MLOps framework: From Data to Depolyment</h1>
+
+ <p align="center">
   <a href="https://www.python.org/">
     <img alt="Python Version" src="https://img.shields.io/badge/Python-3.7%2B-informational">
   </a>
@@ -21,9 +24,6 @@
     <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-Latest-orange">
   </a>
 </p>
-<h1 align="center">End-to-End MLOps framework: From Data to Depolyment</h1>
-
- 
 <p align="center">
   <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="Amazon S3" width="50" height="50" />
