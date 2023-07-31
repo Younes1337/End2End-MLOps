@@ -98,16 +98,58 @@ pip install -r requirements.txt
 ```
 ### Project Structure
 ```bash
-|-- mlops_project/
-    |-- data/
-    |-- models/
-    |-- notebooks/
-    |-- scripts/
-    |-- tests/
-    |-- config/
-    |-- README.md
-    |-- requirements.txt
-    |-- .gitignore
+MLOps_project/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── Dockerfile
+├── docker-compose.yml
+│
+├── src/
+│   ├── __init__.py
+│   ├── app.py
+│   ├── data/
+│   │   └── (data loading and preprocessing scripts)
+│   ├── models/
+│   │   └── (machine learning models and related scripts)
+│   ├── utils/
+│   │   └── (utility functions and helper scripts)
+│   └── mlflow_server.py
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_app.py
+│   ├── test_data.py
+│   ├── test_models.py
+│   └── test_utils.py
+│
+├── experiments/
+│   ├── experiment_1/
+│   │   └── mlruns/
+│   └── experiment_2/
+│       └── mlruns/
+│
+├── config/
+│   ├── config.yaml
+│   └── logging.yaml
+│
+├── logs/
+│   └── (log files)
+│
+├── dashboards/
+│   └── (Grafana dashboard configurations)
+│
+├── deployment/
+│   ├── nginx.conf
+│   ├── supervisor.conf
+│   └── app.service
+│
+└── scripts/
+    ├── setup.sh
+    ├── deploy.sh
+    └── run_tests.sh
+
 
 ```
 
