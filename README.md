@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://cdnlogo.com/logo/phoenix_36514.html">
-    <img src="https://www.cdnlogo.com/logos/p/36/phoenix.svg" alt="Logo" width="80" height="80">
+    <img src="https://www.cdnlogo.com/logos/p/36/phoenix.svg" alt="Logo" width="120" height="120">
   </a>
 </p>
 
