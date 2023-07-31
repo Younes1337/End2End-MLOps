@@ -1,6 +1,6 @@
 <!-- Logo, Title, and Badges Section -->
 <p align="center">
-  <a href="https://cdnlogo.com/logo/phoenix_36514.html">
+  <a>
     <img src="https://www.cdnlogo.com/logos/p/36/phoenix.svg" alt="Logo" width="150" height="150">
   </a>
 </p>
