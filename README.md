@@ -43,7 +43,7 @@
 </p>
 
 <!-- Divider -->
-<hr></hr>
+<hr>
 
 ## Introduction
 Welcome to the MLOps project! This repository aims to showcase a comprehensive MLOps implementation, enabling smooth and efficient development, deployment, and maintenance of machine learning models. MLOps is the practice of integrating machine learning workflows with DevOps practices, ensuring reproducibility, scalability, and automation throughout the model's lifecycle.
