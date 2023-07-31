@@ -5,7 +5,7 @@
   </a>
 </p>
 
-<h1 align="center">End-to-End MLOps framework: From Data to Deployment</h1>
+<h1 align="center">End-to-End MLOps: From Data to Deployment</h1>
 
 <p align="center">
   <a href="https://www.python.org/">
