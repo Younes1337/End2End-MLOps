@@ -35,7 +35,7 @@
   <a title="Jason Long, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git-logo.svg">
     <img width="50" alt="Git-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png">
   </a>
-<a title="Amazon.com, Inc., Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Amazon-S3-Logo.svg"><img width="50" alt="Amazon-S3-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/256px-Amazon-S3-Logo.svg.png"></a>  <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="90" height="50" />
+<a title="Amazon.com, Inc., Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Amazon-S3-Logo.svg"><img width="50" alt="Amazon-S3-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/256px-Amazon-S3-Logo.svg.png"></a>  <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" width="50" height="50" />
 </p>
 
