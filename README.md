@@ -5,7 +5,7 @@
   <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="Amazon S3" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="Flask" width="50" height="50" />
  <a href="https://cdnlogo.com/logo/data-version-control_134778.html"><img src="https://www.cdnlogo.com/logos/d/2/data-version-control.svg"  width="50" height="50"></a>
- <a title="Amazon.com, Inc., Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Amazon-S3-Logo.svg"><img width="50" alt="Amazon-S3-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/256px-Amazon-S3-Logo.svg.png"></a>
+  <a title="Amazon.com, Inc., Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Amazon-S3-Logo.svg"><img width="50" alt="Amazon-S3-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/256px-Amazon-S3-Logo.svg.png"></a>
 <a title="Jason Long, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Git-logo.svg"><img width="90" alt="Git-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png"></a>  <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" width="50" height="50" />
 </p>
