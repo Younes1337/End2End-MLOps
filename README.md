@@ -1,7 +1,7 @@
 <!-- Logo, Title, and Badges Section -->
 <p align="center">
   <a>
-    <img src="./logo-white.png" alt="Logo" width="150" height="150">
+    <a href="https://cdnlogo.com/logo/surge_135051.html"><img src="https://www.cdnlogo.com/logos/s/50/surge.svg"></a>
   </a>
 </p>
 
