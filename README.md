@@ -1,7 +1,7 @@
 <!-- Logo, Title, and Badges Section -->
 <p align="center">
   <a>
-    <img src="./logo-white.png">
+    <img src="./logo-white.png" width="150" height="150">
   </a>
 </p>
 
