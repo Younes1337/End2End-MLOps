@@ -37,7 +37,7 @@
   </a>
   <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" width="50" height="50" />
-  <a href="https://cdnlogo.com/logo/nginx_21605.html"><img src="https://www.cdnlogo.com/logos/n/45/nginx.svg" width="50" height="50"></a>
+  
 
 </p>
 
