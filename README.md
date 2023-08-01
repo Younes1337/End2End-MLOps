@@ -91,7 +91,7 @@ Set up your AWS credentials on your local machine. You can do this by installing
 Navigate to the project directory.
 
 
-4. **Build Docker Image and Push to ECR:**
+2. **Build Docker Image and Push to ECR:**
 
 - Ensure you have Docker running on your local machine.
 
@@ -129,13 +129,13 @@ Navigate to the project directory.
 
   Replace `<region>` with the AWS region you want to use, `<aws_account_id>` with your AWS account ID, and `project-repo` with the name of the ECR repository you created.
 
-5. **Set up S3 Bucket:**
+3. **Set up S3 Bucket:**
 
 - Create an S3 bucket using the AWS Management Console or the AWS CLI.
 
 - Note down the name of the S3 bucket, as it will be used later.
 
-6. **EC2 Instance Setup:**
+4. **EC2 Instance Setup:**
 
 - Launch an EC2 instance in your AWS account using the AWS Management Console or the AWS CLI.
 
@@ -145,7 +145,7 @@ Navigate to the project directory.
 
 - Once the instance is running, note down its public IP address or DNS name.
 
-7. **SSH into the EC2 Instance:**
+5. **SSH into the EC2 Instance:**
 
 Use SSH to connect to the EC2 instance:
 
@@ -177,13 +177,6 @@ Replace `<aws_account_id>` with your AWS account ID, `<region>` with the AWS reg
 
 The Docker container should now be running the web application on port 80. Open a web browser and enter the public IP address or DNS name of the EC2 instance to access the web application.
 
-## Cleaning Up
-
-Remember to clean up your AWS resources to avoid unnecessary charges:
-
-- Terminate the EC2 instance when you no longer need it.
-- Delete the ECR repository and Docker image (if required).
-- Delete the S3 bucket (if required).
 
 ## Versions
 
