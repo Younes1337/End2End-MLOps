@@ -73,6 +73,84 @@ The MLOps project utilizes the following main tools and libraries:
 - Grafana 📈 - a monitoring and observability platform.
 - GitLab 🔧 - version control and continuous integration platform.
 
+## Prerequisites
+
+Before you begin, make sure you have the following in place:
+
+- **AWS Account:** You need an AWS account to access EC2, ECR, and S3 services.
+- **Docker:** Make sure you have Docker installed on your local machine.
+- **Python:** Ensure you have Python (version 3.6 or higher) and pip installed.
+
+## Setup
+Navigate to the project directory.
+
+1. **Configure AWS Credentials:**
+
+Set up your AWS credentials on your local machine. You can do this by installing the AWS Command Line Interface (CLI) and running the `aws configure` command, providing your AWS Access Key ID, Secret Access Key, and default region.
+
+Navigate to the project directory.
+
+
+4. **Build Docker Image and Push to ECR:**
+
+- Ensure you have Docker running on your local machine.
+
+- Create an Amazon ECR repository using the AWS Management Console or the AWS CLI.
+
+- Build the Docker image:
+
+  ```
+  docker build -t project-name .
+  ```
+
+  Replace `project-name` with a suitable name for your Docker image.
+
+- Tag the Docker image with the ECR repository URI:
+
+  ```
+  docker tag project-name:latest <aws_account_id>.dkr.ecr.<region>.amazonaws.com/project-repo:latest
+  ```
+
+  Replace `<aws_account_id>` with your AWS account ID, `<region>` with the AWS region you want to use, and `project-repo` with the name of the ECR repository you created.
+
+- Log in to the ECR registry:
+
+  ```
+  aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
+  ```
+
+  Replace `<region>` with the AWS region you want to use, and `<aws_account_id>` with your AWS account ID.
+
+- Push the Docker image to ECR:
+
+  ```
+  docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/project-repo:latest
+  ```
+
+  Replace `<region>` with the AWS region you want to use, `<aws_account_id>` with your AWS account ID, and `project-repo` with the name of the ECR repository you created.
+
+5. **Set up S3 Bucket:**
+
+- Create an S3 bucket using the AWS Management Console or the AWS CLI.
+
+- Note down the name of the S3 bucket, as it will be used later.
+
+6. **EC2 Instance Setup:**
+
+- Launch an EC2 instance in your AWS account using the AWS Management Console or the AWS CLI.
+
+- Choose an appropriate instance type and Amazon Machine Image (AMI) with Docker pre-installed.
+
+- Make sure to configure the security groups to allow access to the necessary ports (e.g., SSH, HTTP).
+
+- Once the instance is running, note down its public IP address or DNS name.
+
+7. **SSH into the EC2 Instance:**
+
+Use SSH to connect to the EC2 instance:
+
+
+
 ## Architecture
 
 <p align="center">
