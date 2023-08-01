@@ -149,6 +149,49 @@ Navigate to the project directory.
 
 Use SSH to connect to the EC2 instance:
 
+Replace `path/to/your/key.pem` with the path to your SSH private key and `ec2-instance-public-ip` with the public IP address or DNS name of the EC2 instance.
+
+## Running the Project
+
+Now that you have set up the Docker image on ECR and launched the EC2 instance, follow the steps below to run the project:
+
+1. **SSH into the EC2 Instance:**
+
+If you haven't already done so, use SSH to connect to the EC2 instance as described in step 7 above.
+
+2. **Pull the Docker Image:**
+
+Pull the Docker image from ECR onto the EC2 instance
+
+
+Replace `<aws_account_id>` with your AWS account ID, `<region>` with the AWS region you used, and `project-repo` with the name of the ECR repository.
+
+3. **Run the Docker Container:**
+
+Run the Docker container on the EC2 instance:
+
+
+Replace `<aws_account_id>` with your AWS account ID, `<region>` with the AWS region you used, and `project-repo` with the name of the ECR repository.
+
+4. **Access the Web Application:**
+
+The Docker container should now be running the web application on port 80. Open a web browser and enter the public IP address or DNS name of the EC2 instance to access the web application.
+
+## Cleaning Up
+
+Remember to clean up your AWS resources to avoid unnecessary charges:
+
+- Terminate the EC2 instance when you no longer need it.
+- Delete the ECR repository and Docker image (if required).
+- Delete the S3 bucket (if required).
+
+## Versions
+
+| Technology   | Version |
+|--------------|---------|
+| Python       | 3.9     |
+| Docker       | 20.10   |
+| AWS CLI      | 2.2.14  |
 
 
 ## Architecture
@@ -233,4 +276,6 @@ pip install -r requirements.txt
 
 
 ```
+## Contributing
 
+If you would like to contribute to this project, please fork the repository, make your changes, and submit a pull request. We welcome contributions from the community!
