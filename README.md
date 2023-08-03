@@ -11,7 +11,7 @@
   <a href="https://www.python.org/">
     <img alt="Python Version" src="https://img.shields.io/badge/Python-3.7%2B-informational">
   </a>
-  <a href="https://github.com/your-username/your-repo">
+  <a href="https://github.com/Younes1337/End2End-MLOps">
     <img alt="GitHub Repo" src="https://img.shields.io/badge/GitHub-Repo-blue">
   </a>
   <a href="https://www.docker.com/">
