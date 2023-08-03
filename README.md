@@ -202,8 +202,8 @@ To get started with this project, follow these instructions to set up your envir
 ### Installation
 ```bash
 # Clone the repository to your local machine
-git clone https://github.com/your-username/mlops-project.git
-cd mlops-project
+git clone https://github.com/Younes1337/End2End-MLOps.git
+cd End2End-MLOps
 
 # Create and activate a virtual environment (optional but recommended)
 python -m venv venv
