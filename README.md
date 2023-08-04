@@ -195,7 +195,7 @@ The Docker container should now be running the web application on port 80. Open 
 
 ## Data Source
 <p align="center">
-  <img src="./Data Source.png" alt="Image Description" style="border-radius: 50%;" />
+  <img src="./Data Source.png" alt="Image Description" style="border-radius: 30%;" />
 </p>
 
 
