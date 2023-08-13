@@ -275,4 +275,5 @@ pip install -r requirements.txt
 ```
 ## Contributing
 
-If you would like to contribute to this project, please fork the repository, make your changes, and submit a pull request. We welcome contributions from the community!
+If you would like to contribute to this project, please fork the repository, make your changes, and submit a pull request. 
+We welcome contributions from the community!
