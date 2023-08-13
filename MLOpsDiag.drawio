@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-08-13T23:14:51.703Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="Z91duSMItHCZfZmkZjlG" version="21.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-13T23:15:52.591Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="WRzHO88UqmHUxMhvVcX5" version="21.6.8" type="github">
   <diagram name="Page-1" id="Xl1nf2hl-qh3Eg5BBoAH">
     <mxGraphModel dx="1050" dy="1679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -369,8 +369,10 @@
         <mxCell id="JoFa_ZvAv2UG-xMNAbuD-54" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Apache_kafka.svg/1261px-Apache_kafka.svg.png;" vertex="1" parent="1">
           <mxGeometry x="349.57" y="-270" width="60.86" height="98.83" as="geometry" />
         </mxCell>
-        <mxCell id="JoFa_ZvAv2UG-xMNAbuD-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JoFa_ZvAv2UG-xMNAbuD-57" target="JoFa_ZvAv2UG-xMNAbuD-52">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="JoFa_ZvAv2UG-xMNAbuD-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="JoFa_ZvAv2UG-xMNAbuD-57">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="627" y="-10" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="JoFa_ZvAv2UG-xMNAbuD-56" value="Store Data to Snwoflake DWH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="JoFa_ZvAv2UG-xMNAbuD-55">
           <mxGeometry x="-0.2968" y="3" relative="1" as="geometry">
@@ -407,6 +409,9 @@
         </mxCell>
         <mxCell id="JoFa_ZvAv2UG-xMNAbuD-63" value="Producer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="337" y="-300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JoFa_ZvAv2UG-xMNAbuD-64" value="&lt;b&gt;Snowflake&lt;br&gt;DWH&lt;br&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="596.68" y="70.00000000000001" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
