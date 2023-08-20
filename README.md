@@ -37,8 +37,7 @@
   </a>
   <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-icon.svg" alt="GitLab" width="50" height="50" />
   <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="Grafana" width="50" height="50" />
-  <a title="Apache Software Foundation, Apache License 2.0 &lt;http://www.apache.org/licenses/LICENSE-2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Apache_kafka.svg"><img width="50" alt="Apache kafka" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Apache_kafka.svg/128px-Apache_kafka.svg.png"></a>
-  <a title="Snowflake, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Snowflake_Logo.svg"><img width="128" alt="Snowflake Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/128px-Snowflake_Logo.svg.png"></a>
+  
   
 
 </p>
@@ -192,7 +191,7 @@ The Docker container should now be running the web application on port 80. Open 
 ## Architecture
 
 <p align="center">
-  <img src="./mlops.png" alt="Image Description" style="border-radius: 50%;" />
+  <img src="./mlops_arch.png" alt="Image Description" style="border-radius: 50%;" />
 </p>
 
 ## Data Source
