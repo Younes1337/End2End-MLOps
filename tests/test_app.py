@@ -1,5 +1,6 @@
 import pytest
 from src.app import app
+import mlflow 
 
 @pytest.fixture
 def client():
@@ -17,4 +18,24 @@ def test_chatbot_response(client):
     assert response.status_code == 200
     assert b"A: Abstract:" in response.data
 
+
+# -------------------------------------------------------------- Check MLflow-Databricks Connection ------------------------------------------------------------------------------ 
+
+@pytest.fixture
+def databricks_connection():
+    # Set the Databricks host URL
+    DATABRICKS_HOST = "https://community.cloud.databricks.com/"
+
+    # Configure Databricks
+    mlflow.set_tracking_uri(DATABRICKS_HOST)
+    yield
+    # Clean up (optional)
+
+def test_mlflow_databricks_connection(databricks_connection):
+    # This test will run with the configured Databricks connection (run configure_databricks_and_mlflow.sh script to set the credentials before running unit test)
+    experiment_name = "/Users/younesmamma20@gmail.com/GPT2-LLM-FineTuning"
+    experiment = mlflow.get_experiment_by_name(experiment_name)
+    assert experiment is not None
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Add more tests for other routes and app behavior
