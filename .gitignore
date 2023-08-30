@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# the model, it's too large
+src/model/
+
 # C extensions
 *.so
 
