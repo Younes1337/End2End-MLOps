@@ -1,6 +1,7 @@
 import pytest
 from src.app import app
 import mlflow 
+import boto3
 
 @pytest.fixture
 def client():
@@ -40,7 +41,31 @@ def test_mlflow_databricks_connection(databricks_connection):
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # -------------------------------------------------------------- Check S3-bucket Connection -------------------------------------------------------------------------------------
-# Write your code here !
+
+# Replace with your AWS credentials and S3 bucket name (make sure you have an IAM access role)
+AWS_ACCESS_KEY_ID = '<your-access-key-id>'
+AWS_SECRET_ACCESS_KEY = '<your-secret-access-key>'
+S3_BUCKET_NAME = '<your-s3-bucket-name>'
+
+@pytest.fixture
+def s3_client():
+    return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+
+def test_s3_bucket_exists(s3_client):
+    # Check if the S3 bucket exists
+    try:
+        s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
+        assert True
+    except Exception as e:
+        assert False, f"Error: {e}"
+
+def test_s3_bucket_access(s3_client):
+    # Check if you can list objects in the S3 bucket
+    try:
+        response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
+        assert 'Contents' in response
+    except Exception as e:
+        assert False, f"Error: {e}"
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Add more tests for other routes and app behavior
