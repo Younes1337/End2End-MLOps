@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import boto3
 from datetime import datetime
 
-# ---------------------------------------------Connecting to S3 Bucket and Store the Coming Data -------------------------------------------
+# --------------------------------------------- Connecting to S3 Bucket and Store the Coming Data -------------------------------------------
 def store_data_in_s3(bucket_name, file_name, data):
     try:
         s3 = boto3.client('s3')
@@ -13,13 +13,13 @@ def store_data_in_s3(bucket_name, file_name, data):
         return f"An error occurred while storing data in S3: {e}"
 
 
-# ---------------------------------------------Lambda Handler Function ---------------------------------------------------------------------
+# ----------------------------------------------------------- Lambda Handler Function ---------------------------------------------------------
 def lambda_handler(event, context):
-    base_url = "https://arxiv.org/search/"
-    query = "Machine learning OR deep learning OR data science OR Models optimization OR LLMs OR Big Data OR generative AI"
-    page_size = 100
-    total_pages = 10
-    bucket_name = "myfreetrial"  # Replace with your S3 bucket name
+    base_url = event["base_url"]
+    query = event["Query"]
+    page_size = 200
+    total_pages = 900
+    bucket_name = "<your-s3-bucket-name>"  # Replace with your S3 bucket name
 
     # Create a file name with the current timestamp
     timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
@@ -69,6 +69,6 @@ def lambda_handler(event, context):
     except Exception as e:
         return f"An error occurred: {e}"
 
-# ---------------------------------------------------------------------More Features to add here ------------------------------------------------------------------
+# ---------------------------------------------------------------------More Features to add here ----------------------------------------------
 # Write your code here
-#-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------------
