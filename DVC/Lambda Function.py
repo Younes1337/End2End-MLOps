@@ -23,7 +23,7 @@ def lambda_handler(event, context):
 
     # Create a file name with the current timestamp
     timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-    file_name = f"{timestamp}_api_data.txt"
+    file_name = f"{timestamp}_{event["Query"]}_api_data.txt"
 
     try:
         data_to_store = ""
