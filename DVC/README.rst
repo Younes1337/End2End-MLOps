@@ -204,39 +204,46 @@ Prerequisites
 
 Before getting started, ensure you have the following prerequisites in place:
 
-1. [Install DVC](https://dvc.org/doc/get-started/install)
-2. [Set up an AWS account](https://aws.amazon.com/) and configure AWS CLI with your access credentials.
-make sure you are connected to s3 bucket : 
+1. Install DVC by following the instructions [here](https://dvc.org/doc/get-started/install).
+2. Set up an AWS account at [AWS](https://aws.amazon.com/) and configure AWS CLI with your access credentials.
+
+Make sure you are connected to the S3 bucket:
 
 .. code:: python
 
-      def s3_client():
-          return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
-      
-      def test_s3_bucket_exists(s3_client):
-          # Check if the S3 bucket exists
-          try:
-              s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
-              print(f"S3 Bucket '{S3_BUCKET_NAME}' exists.")
-          except Exception as e:
-              print(f"Error: {e}")
-              print(f"S3 Bucket '{S3_BUCKET_NAME}' does not exist.")
-      
-      def test_s3_bucket_access(s3_client):
-          # Check if you can list objects in the S3 bucket
-          try:
-              response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
-              if 'Contents' in response:
-                  print(f"Successfully accessed objects in S3 Bucket '{S3_BUCKET_NAME}'.")
-              else:
-                  print(f"No objects found in S3 Bucket '{S3_BUCKET_NAME}'.")
-          except Exception as e:
-              print(f"Error: {e}")
-      
-      if __name__ == "__main__":
-          s3 = s3_client()
-          test_s3_bucket_exists(s3)
-          test_s3_bucket_access(s3)
+   import boto3
+
+   AWS_ACCESS_KEY_ID = "Your_AWS_ACCESS_KEY_ID"
+   AWS_SECRET_ACCESS_KEY = "Your_AWS_SECRET_ACCESS_KEY"
+   S3_BUCKET_NAME = 'Your_S3_Bucket_Name'
+
+   def s3_client():
+       return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+
+   def test_s3_bucket_exists(s3_client):
+       # Check if the S3 bucket exists
+       try:
+           s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
+           print(f"S3 Bucket '{S3_BUCKET_NAME}' exists.")
+       except Exception as e:
+           print(f"Error: {e}")
+           print(f"S3 Bucket '{S3_BUCKET_NAME}' does not exist.")
+
+   def test_s3_bucket_access(s3_client):
+       # Check if you can list objects in the S3 bucket
+       try:
+           response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
+           if 'Contents' in response:
+               print(f"Successfully accessed objects in S3 Bucket '{S3_BUCKET_NAME}'.")
+           else:
+               print(f"No objects found in S3 Bucket '{S3_BUCKET_NAME}'.")
+       except Exception as e:
+           print(f"Error: {e}")
+
+   if __name__ == "__main__":
+       s3 = s3_client()
+       test_s3_bucket_exists(s3)
+       test_s3_bucket_access(s3)
 
 Getting Started
 ---------------
@@ -245,15 +252,47 @@ Getting Started
 
 To begin using DVC, initialize a new project:
 
-.. code:shell
+.. code:: shell
+
    mkdir my-dvc-project
    cd my-dvc-project
    dvc init
+
+### Configure S3 as a Remote Storage
+
+Now, configure S3 as the remote storage for your DVC project:
+
+.. code:: shell
+
    dvc remote add -d my-s3-remote s3://my-bucket-name/path/to/data
-   dvc add data/my_data.txt
+
+Replace `my-s3-remote` with a suitable name for your remote and `s3://my-bucket-name/path/to/data` with your actual S3 bucket path.
+
+### Add Data to DVC
+
+Add your data files to the DVC project. This doesn't store the data directly in Git but tracks it using DVC:
+
+.. code:: shell
+
+   dvc add data/my_data.csv
+
+### Commit Changes
+
+Commit the changes made by DVC to your Git repository:
+
+.. code:: shell
+
    git add .dvc .gitignore data/my_data.csv.dvc
    git commit -m "Add data tracking with DVC"
+
+### Push Data to S3
+
+Push your data to the S3 remote storage:
+
+.. code:: shell
+
    dvc push
+
 
 
 
