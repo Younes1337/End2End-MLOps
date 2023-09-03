@@ -310,6 +310,7 @@ Scheduing Data Extraction using Lambda Functions and CloudWatch Events
         except Exception as e:
             print(f"An error occurred: {e}")
 
+for each Lmabda event : 
 
 .. code:: json 
    {
