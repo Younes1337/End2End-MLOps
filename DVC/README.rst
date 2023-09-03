@@ -195,35 +195,7 @@ Fedora / CentOS (rpm)
    sudo yum update
    sudo yum install dvc
 
-Contributing
-============
 
-|Maintainability|
-
-Contributions are welcome!
-Please see our `Contributing Guide <https://dvc.org/doc/user-guide/contributing/core>`_ for more details.
-Thanks to all our contributors!
-
-|Contribs|
-
-Community and Support
-=====================
-
-* `Twitter <https://twitter.com/DVCorg>`_
-* `Forum <https://discuss.dvc.org/>`_
-* `Discord Chat <https://dvc.org/chat>`_
-* `Email <mailto:support@dvc.org>`_
-* `Mailing List <https://sweedom.us10.list-manage.com/subscribe/post?u=a08bf93caae4063c4e6a351f6&id=24c0ecc49a>`_
-
-Copyright
-=========
-
-This project is distributed under the Apache license version 2.0 (see the LICENSE file in the project root).
-
-By submitting a pull request to this project, you agree to license your contribution under the Apache license version 2.0 to this project.
-
-Citation
-========
 
 |DOI|
 
