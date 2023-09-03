@@ -263,13 +263,7 @@ Scheduing Data Extraction using Lambda Functions and CloudWatch Events
 1 - First, we Create a Lambda function (Handler Function) : 
 
 .. code:: python
-    """
-    for each Lambda run event : 
-            {
-                  event: "https://arxiv.org/search/",
-                  Query: "DATA SCIENCE OR MACHINE LEARNING"
-            } 
-    """
+    
 
     def lambda_handler(event, context):
         base_url = event["base_url"]
@@ -317,7 +311,13 @@ Scheduing Data Extraction using Lambda Functions and CloudWatch Events
         except Exception as e:
             print(f"An error occurred: {e}")
 
+for each Lambda run event : 
+.. code:: json 
 
+       {
+         event: "https://arxiv.org/search/",
+         Query: "DATA SCIENCE OR MACHINE LEARNING"
+       }
 
 2 - We Schedule the event execution using CloudWatch Events service : 
 
