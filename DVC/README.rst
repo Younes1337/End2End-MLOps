@@ -1,15 +1,5 @@
 |Banner|
 
-`Website <https://dvc.org>`_
-• `Docs <https://dvc.org/doc>`_
-• `Blog <http://blog.dataversioncontrol.com>`_
-• `Tutorial <https://dvc.org/doc/get-started>`_
-• `Related Technologies <https://dvc.org/doc/user-guide/related-technologies>`_
-• `How DVC works`_
-• `VS Code Extension`_
-• `Installation`_
-• `Contributing`_
-• `Community and Support`_
 
 |CI| |Python Version| |Coverage| |VS Code| |DOI|
 
@@ -88,20 +78,6 @@ They specify all steps required to produce a model: input dependencies including
 Last but not least, `DVC Experiment Versioning <https://dvc.org/doc/start/experiments>`_ lets you prepare and run a large number of experiments.
 Their results can be filtered and compared based on hyperparameters and metrics, and visualized with multiple plots.
 
-.. _`VS Code Extension`:
-
-Visual Studio Code Extension
-============================
-
-|VS Code|
-
-To use DVC as a GUI right from your VS Code IDE, install the `DVC Extension <https://marketplace.visualstudio.com/items?itemName=Iterative.dvc>`_ from the Marketplace.
-It currently features experiment tracking and data management, and more features (data pipeline support, etc.) are coming soon!
-
-|VS Code Extension Overview|
-
-    Note: You'll have to install core DVC on your system separately (as detailed
-    below). The Extension will guide you if needed.
 
 Installation
 ============
@@ -138,18 +114,6 @@ Brew (mac OS)
 .. code-block:: bash
 
    brew install dvc
-
-Anaconda (Any platform)
------------------------
-
-|Conda|
-
-.. code-block:: bash
-
-   conda install -c conda-forge mamba # installs much faster than conda
-   mamba install -c conda-forge dvc
-
-Depending on the remote storage type you plan to use to keep and share your data, you might need to install optional dependencies: `dvc-s3`, `dvc-azure`, `dvc-gdrive`, `dvc-gs`, `dvc-oss`, `dvc-ssh`.
 
 PyPI (Python)
 -------------
