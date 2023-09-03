@@ -175,15 +175,6 @@ Make sure you are connected to the S3 bucket:
 
 .. code:: python
 
-   import boto3
-
-   AWS_ACCESS_KEY_ID = "Your_AWS_ACCESS_KEY_ID"
-   AWS_SECRET_ACCESS_KEY = "Your_AWS_SECRET_ACCESS_KEY"
-   S3_BUCKET_NAME = 'Your_S3_Bucket_Name'
-
-   def s3_client():
-       return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
-
    def test_s3_bucket_exists(s3_client):
        # Check if the S3 bucket exists
        try:
@@ -192,22 +183,6 @@ Make sure you are connected to the S3 bucket:
        except Exception as e:
            print(f"Error: {e}")
            print(f"S3 Bucket '{S3_BUCKET_NAME}' does not exist.")
-
-   def test_s3_bucket_access(s3_client):
-       # Check if you can list objects in the S3 bucket
-       try:
-           response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
-           if 'Contents' in response:
-               print(f"Successfully accessed objects in S3 Bucket '{S3_BUCKET_NAME}'.")
-           else:
-               print(f"No objects found in S3 Bucket '{S3_BUCKET_NAME}'.")
-       except Exception as e:
-           print(f"Error: {e}")
-
-   if __name__ == "__main__":
-       s3 = s3_client()
-       test_s3_bucket_exists(s3)
-       test_s3_bucket_access(s3)
 
 Getting Started
 ---------------
