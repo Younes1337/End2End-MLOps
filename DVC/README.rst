@@ -312,7 +312,7 @@ Scheduing Data Extraction using Lambda Functions and CloudWatch Events
 
 for each Lmabda event : 
 
-.. code:: json 
+.. code:: python
    {
       event: "https://arxiv.org/search/",
       Query: "DATA SCIENCE OR MACHINE LEARNING"
