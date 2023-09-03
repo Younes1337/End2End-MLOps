@@ -293,10 +293,6 @@ Push your data to the S3 remote storage:
 
    dvc push
 
-
-Scheduling Data Extraction Using Lambda Function and CloudWatch Events 
-======================================================================
-
 .. code:: python 
     def lambda_handler(event, context):
     base_url = "https://arxiv.org/search/"
