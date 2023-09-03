@@ -195,6 +195,37 @@ Fedora / CentOS (rpm)
    sudo yum update
    sudo yum install dvc
 
+.. code:: python
+
+      def s3_client():
+          return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+      
+      def test_s3_bucket_exists(s3_client):
+          # Check if the S3 bucket exists
+          try:
+              s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
+              print(f"S3 Bucket '{S3_BUCKET_NAME}' exists.")
+          except Exception as e:
+              print(f"Error: {e}")
+              print(f"S3 Bucket '{S3_BUCKET_NAME}' does not exist.")
+      
+      def test_s3_bucket_access(s3_client):
+          # Check if you can list objects in the S3 bucket
+          try:
+              response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
+              if 'Contents' in response:
+                  print(f"Successfully accessed objects in S3 Bucket '{S3_BUCKET_NAME}'.")
+              else:
+                  print(f"No objects found in S3 Bucket '{S3_BUCKET_NAME}'.")
+          except Exception as e:
+              print(f"Error: {e}")
+      
+      if __name__ == "__main__":
+          s3 = s3_client()
+          test_s3_bucket_exists(s3)
+          test_s3_bucket_access(s3)
+
+
 
 
 .. |Banner| image:: https://dvc.org/img/logo-github-readme.png
