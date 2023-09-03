@@ -1,16 +1,5 @@
 |Banner|
 
-`Website <https://dvc.org>`_
-• `Docs <https://dvc.org/doc>`_
-• `Blog <http://blog.dataversioncontrol.com>`_
-• `Tutorial <https://dvc.org/doc/get-started>`_
-• `Related Technologies <https://dvc.org/doc/user-guide/related-technologies>`_
-• `How DVC works`_
-• `VS Code Extension`_
-• `Installation`_
-• `Contributing`_
-• `Community and Support`_
-
 |CI| |Python Version| |Coverage| |VS Code| |DOI|
 
 |PyPI| |PyPI Downloads| |Packages| |Brew| |Conda| |Choco| |Snap|
@@ -195,14 +184,53 @@ Fedora / CentOS (rpm)
    sudo yum update
    sudo yum install dvc
 
+How to send Data Version after Connecting to S3 Bucket 
+======================================================
 
+after Connecting to your S3 Bucket using Python Code : 
 
-|DOI|
+1 - Installing boto3 package : 
 
-Iterative, *DVC: Data Version Control - Git for Data & Models* (2020)
-`DOI:10.5281/zenodo.012345 <https://doi.org/10.5281/zenodo.3677553>`_.
+```bash
+pip install boto3
+```
 
-Barrak, A., Eghan, E.E. and Adams, B. `On the Co-evolution of ML Pipelines and Source Code - Empirical Study of DVC Projects <https://mcis.cs.queensu.ca/publications/2021/saner.pdf>`_ , in Proceedings of the 28th IEEE International Conference on Software Analysis, Evolution, and Reengineering, SANER 2021. Hawaii, USA.
+```python
+import boto3
+
+AWS_ACCESS_KEY_ID = "<your-aws-access-key-id>"
+AWS_SECRET_ACCESS_KEY = "<your-aws-secret-access-key>"
+S3_BUCKET_NAME = '<your-s3-bucket-name>'
+
+def s3_client():
+    return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+
+def test_s3_bucket_exists(s3_client):
+    # Check if the S3 bucket exists
+    try:
+        s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
+        print(f"S3 Bucket '{S3_BUCKET_NAME}' exists.")
+    except Exception as e:
+        print(f"Error: {e}")
+        print(f"S3 Bucket '{S3_BUCKET_NAME}' does not exist.")
+
+def test_s3_bucket_access(s3_client):
+    # Check if you can list objects in the S3 bucket
+    try:
+        response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
+        if 'Contents' in response:
+            print(f"Successfully accessed objects in S3 Bucket '{S3_BUCKET_NAME}'.")
+        else:
+            print(f"No objects found in S3 Bucket '{S3_BUCKET_NAME}'.")
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    s3 = s3_client()
+    test_s3_bucket_exists(s3)
+    test_s3_bucket_access(s3)
+
+```
 
 
 .. |Banner| image:: https://dvc.org/img/logo-github-readme.png
