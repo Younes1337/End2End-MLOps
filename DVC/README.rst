@@ -297,7 +297,7 @@ Push your data to the S3 remote storage:
 Scheduling Data Extraction Using Lambda Function and CloudWatch Events 
 ======================================================================
 
-.. code: python 
+.. code:: python 
     def lambda_handler(event, context):
     base_url = "https://arxiv.org/search/"
     query = "MACHINE LEARNING"
@@ -359,7 +359,7 @@ Scheduling Data Extraction Using Lambda Function and CloudWatch Events
     except Exception as e:
         print(f"An error occurred: {e}")
 
-.. code: json 
+.. code:: json 
    {
       event: "https://arxiv.org/search/",
       Query: "DATA SCIENCE OR MACHINE LEARNING"
