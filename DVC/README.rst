@@ -3,7 +3,7 @@
 
 |CI| |Python Version| |Coverage| |VS Code| |DOI|
 
-|PyPI| |PyPI Downloads| |Packages| |Brew| |Conda| |Choco| |Snap|
+|PyPI|  |Packages| |Brew| |Choco| |Snap|
 
 |
 
@@ -323,6 +323,10 @@ Scheduing Data Extraction using Lambda Functions and CloudWatch Events
 
 2 - We Schedule the event execution using CloudWatch Events service : 
 
+.. code:: shell
+
+   # Schedule a task to run at 9:00 AM and 6:00 PM every day
+   0 9,18 * * * /path/to/your/command
 
 
 
