@@ -195,7 +195,7 @@ after Connecting to your S3 Bucket using Python Code :
 pip install boto3
 ```
 
-```python
+.. code-block:: python
 import boto3
 
 AWS_ACCESS_KEY_ID = "<your-aws-access-key-id>"
@@ -230,7 +230,7 @@ if __name__ == "__main__":
     test_s3_bucket_exists(s3)
     test_s3_bucket_access(s3)
 
-```
+..
 
 
 .. |Banner| image:: https://dvc.org/img/logo-github-readme.png
