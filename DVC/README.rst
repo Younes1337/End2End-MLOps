@@ -195,6 +195,19 @@ Fedora / CentOS (rpm)
    sudo yum update
    sudo yum install dvc
 
+
+DVC with S3 Remote Storage
+=========================
+
+Prerequisites
+-------------
+
+Before getting started, ensure you have the following prerequisites in place:
+
+1. [Install DVC](https://dvc.org/doc/get-started/install)
+2. [Set up an AWS account](https://aws.amazon.com/) and configure AWS CLI with your access credentials.
+make sure you are connected to s3 bucket : 
+
 .. code:: python
 
       def s3_client():
@@ -224,6 +237,23 @@ Fedora / CentOS (rpm)
           s3 = s3_client()
           test_s3_bucket_exists(s3)
           test_s3_bucket_access(s3)
+
+Getting Started
+---------------
+
+### Initialize a DVC Project
+
+To begin using DVC, initialize a new project:
+
+.. code:shell
+   mkdir my-dvc-project
+   cd my-dvc-project
+   dvc init
+   dvc remote add -d my-s3-remote s3://my-bucket-name/path/to/data
+   dvc add data/my_data.txt
+   git add .dvc .gitignore data/my_data.csv.dvc
+   git commit -m "Add data tracking with DVC"
+   dvc push
 
 
 
