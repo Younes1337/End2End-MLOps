@@ -173,62 +173,41 @@ Before getting started, ensure you have the following prerequisites in place:
 
 Make sure you are connected to the S3 bucket:
 
-.. code:: python 
-         def lambda_handler(event, context):
-             base_url = "https://arxiv.org/search/"
-             query = "MACHINE LEARNING"
-             page_size = 100
-             start_page = 1
-             total_pages = 3
-             bucket_name = "myfreetrial"  # Replace with your S3 bucket name
-         
-             # Create a file name with timestamp and query
-             timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-             query_file_name = "_".join(query.split())  # Remove spaces from query and use underscores
-             file_name = f"{timestamp}_{query_file_name}_api_data.txt"
-         
-             try:
-                 data_to_store = ""
-                 aws_access_key_id = "<your-access-key-id>"
-                 aws_secret_access_key = "<your-secret-key-id>"
-                 s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-         
-                 for page in range(1, total_pages + 1):
-                     params = {
-                         # ... params to extract Data
-                     }
-         
-                     response = requests.get(base_url, params=params, timeout=10)
-                     response.raise_for_status()
-         
-                     doc = BeautifulSoup(response.text, "html.parser")
-         
-                     links = [a['href'] for a in doc.find_all('a', href=True) if 'https://arxiv.org/abs/' in a['href']]
-         
-                     for link in links:
-                         try:
-                             response = requests.get(link, timeout=10)
-                             response.raise_for_status()
-         
-                             doc = BeautifulSoup(response.text, "html.parser")
-         
-                             title = doc.find('h1', class_='title mathjax').text.strip()
-                             abstract = doc.find('blockquote', class_='abstract mathjax').text.strip()
-         
-                             question = f"Q: Can you give me an abstract for my research paper with the {title}?"
-                             answer = f"A: {abstract}"
-         
-                             data_to_store += question + "\n" + answer + "\n\n"
-                             print(f"Collected data for {title}")
-         
-                         except Exception as e:
-                             print(f"Error scraping link {link}: {e}")
-         
-                 s3.put_object(Bucket=bucket_name, Key=file_name, Body=data_to_store.encode('utf-8'))
-                 print(f"Stored final data in S3: s3://{bucket_name}/{file_name}")
-         
-             except Exception as e:
-                 print(f"An error occurred: {e}")
+.. code:: python
+
+   import boto3
+
+   AWS_ACCESS_KEY_ID = "Your_AWS_ACCESS_KEY_ID"
+   AWS_SECRET_ACCESS_KEY = "Your_AWS_SECRET_ACCESS_KEY"
+   S3_BUCKET_NAME = 'Your_S3_Bucket_Name'
+
+   def s3_client():
+       return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+
+   def test_s3_bucket_exists(s3_client):
+       # Check if the S3 bucket exists
+       try:
+           s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
+           print(f"S3 Bucket '{S3_BUCKET_NAME}' exists.")
+       except Exception as e:
+           print(f"Error: {e}")
+           print(f"S3 Bucket '{S3_BUCKET_NAME}' does not exist.")
+
+   def test_s3_bucket_access(s3_client):
+       # Check if you can list objects in the S3 bucket
+       try:
+           response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
+           if 'Contents' in response:
+               print(f"Successfully accessed objects in S3 Bucket '{S3_BUCKET_NAME}'.")
+           else:
+               print(f"No objects found in S3 Bucket '{S3_BUCKET_NAME}'.")
+       except Exception as e:
+           print(f"Error: {e}")
+
+   if __name__ == "__main__":
+       s3 = s3_client()
+       test_s3_bucket_exists(s3)
+       test_s3_bucket_access(s3)
 
 Getting Started
 ---------------
