@@ -264,26 +264,18 @@ Scheduing Data Extraction using Lambda Functions and CloudWatch Events
 
 .. code:: python
 
-    def main():
-        base_url = "https://arxiv.org/search/"
-        query = "DATA SCIENCE OR MACHINE LEARNING OR DEEP LEARNING"
-        page_size = 100
-        start_page = 1
-        total_pages = 3
-        bucket_name = "myfreetrial"  # Replace with your S3 bucket name
-        file_name = "qa_pairs2.txt"
+    def lambda_handler(event, context):
+        base_url = event["base_url"]
+        query = event["Query"]
+
+        # ... params for file saving and total pages to extract 
 
         try:
             data_to_store = ""
 
             for page in range(1, total_pages + 1):
                 params = {
-                    "query": query,
-                    "searchtype": "all",
-                    "abstracts": "show",
-                    "order": "-announced_date_first",
-                    "size": page_size,
-                    "start": (page - 1) * page_size + 1
+                   # ... params to extract the data 
                 }
 
                 response = requests.get(base_url, params=params, timeout=10)
