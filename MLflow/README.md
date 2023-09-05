@@ -128,7 +128,10 @@ def list_files_in_bucket(s3_client, bucket_name):
 
 # MLflow Project Architecture
 
-This document provides an overview of the architecture for managing machine learning projects using MLflow.
+<div align="center">
+  <img src="MLflowArch.png" alt="Sample Image">
+</div>
+
 
 ## Overview
 
