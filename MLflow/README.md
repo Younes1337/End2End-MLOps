@@ -14,7 +14,7 @@ MLflow simplifies the machine learning lifecycle from data extraction to model d
   - [Installation](#installation)
 - [Overview of the Large Language Model](#overView-of-the-Model)
 - [Set Up the environment](#usage)
-- [MLflow Architecture](#MLflow Architecture)
+- [MLflow Architecture](#MLflow-Architecture)
 - [Inference](#inference)
 - [Model Tracking](#model-tracking)
 - [Contributing](#contributing)
