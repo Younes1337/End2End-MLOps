@@ -236,14 +236,18 @@ mlflow.log_artifacts(training_args.output_dir, artifact_path="model_and_tokenize
 # Register the model and tokenizer as a single entity
 mlflow.pytorch.log_model(trainer.model, "fine_tuned_gpt2")
 ```
-### 6. Continuous Learning
 
-MLflow's architecture supports continuous learning. When new data becomes available in the S3 bucket, the process can be repeated. New model versions are trained on fresh data, enhancing their capabilities and adapting to changing conditions.
+### 6.Load Model and Artifacts from Databricks MLflow space
+After Fine tuning and evaluating your models you can upload them for an integration in an APP, API, ... , so that's how you can do it , you just need to make sure you are connected to your MLflow databricks space and give a valid id (an existing one) : 
 
-## Conclusion
+```python 
+import mlflow
+logged_model = 'runs:/<run-id>/<Model-Folder>'
 
-The MLflow project architecture facilitates structured machine learning project management, ensuring reproducibility, scalability, and adaptation to evolving data.
+# Load model as a PyFuncModel.
+loaded_model = mlflow.pyfunc.load_model(logged_model)
+```
 
-For more detailed information on each component, please refer to the respective documentation.
+
 
 
