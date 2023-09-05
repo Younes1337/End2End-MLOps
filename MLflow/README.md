@@ -1,4 +1,4 @@
-# GPT2 - Large LANGUAGE MODEL (GPTArticles-Assistant)
+# GPT2 - Large Language Model (GPTArticles-Assistant)
 
 [![MLflow Version](https://img.shields.io/badge/MLflow-1.x-blue.svg)](https://mlflow.org/)
 [![Python Version](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
