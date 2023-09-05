@@ -50,7 +50,7 @@ GPT-2's remarkable performance and open-source availability have made it a corne
 
 ## Usage 
 
-- **Setting DataBricks Connection nad Configure MLflow space**: 
+- **Setting DataBricks Connection nad Configure MLflow space:** 
 Aftre Creating your Databricks MLflow space follow the following steps : 
 
 ```bash 
@@ -65,4 +65,36 @@ import mlflow
 mlflow.set_tracking_uri("databricks")
 mlflow.set_experiment("/Users/<user-name>/<space-name>")
 ```
+**Connecting to your AWS S3 Bucket : **
+First make sure you have an IAM role access so you can connect to your s3 bucket and perform many operations:
 
+```python 
+import boto3
+
+AWS_ACCESS_KEY_ID = "<your-aws-access-key-id>"
+AWS_SECRET_ACCESS_KEY = "<your-aws-secret-access-key>"
+S3_BUCKET_NAME = '<your-s3-bucket-name>'
+
+def s3_client():
+    return boto3.client('s3', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+
+def test_s3_bucket_exists(s3_client):
+    # Check if the S3 bucket exists
+    try:
+        s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
+        print(f"S3 Bucket '{S3_BUCKET_NAME}' exists.")
+    except Exception as e:
+        print(f"Error: {e}")
+        print(f"S3 Bucket '{S3_BUCKET_NAME}' does not exist.")
+
+def test_s3_bucket_access(s3_client):
+    # Check if you can list objects in the S3 bucket
+    try:
+        response = s3_client.list_objects_v2(Bucket=S3_BUCKET_NAME)
+        if 'Contents' in response:
+            print(f"Successfully accessed objects in S3 Bucket '{S3_BUCKET_NAME}'.")
+        else:
+            print(f"No objects found in S3 Bucket '{S3_BUCKET_NAME}'.")
+    except Exception as e:
+        print(f"Error: {e}")
+```
