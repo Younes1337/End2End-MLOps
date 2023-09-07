@@ -65,7 +65,7 @@ import mlflow
 mlflow.set_tracking_uri("databricks")
 mlflow.set_experiment("/Users/<user-name>/<space-name>")
 ```
-**Connecting to your AWS S3 Bucket : **
+**Connecting to your AWS S3 Bucket :**
 First make sure you have an IAM role access so you can connect to your s3 bucket and perform many operations:
 
 ```python 
